@@ -9,4 +9,4 @@ Follow these steps to start the program:
 3. Type 'python app.py'
 4. Enter the URL link generated to your search engine
 
-NOTE: The .keras model is inside the '/static' folder
+NOTE: The .keras model is inside the '/static' folder (in link form to the drive)
