@@ -1,0 +1,106 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>About - ScolioCheck</title>  
+    <script src="https://cdn.tailwindcss.com"></script>  
+    <style>  
+        body {  
+            background-color: #f9fafb;  
+            display: flex;  
+            flex-direction: column;  
+            min-height: 100vh;  
+        }  
+        .hero-image {  
+            width: 100%;  
+            max-width: 800px;  
+            height: 350px;  
+            object-fit: cover;  
+            border-radius: 16px;  
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);  
+            transition: transform 0.3s ease, box-shadow 0.3s ease;  
+        }  
+        .hero-image:hover {  
+            transform: scale(1.02);  
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);  
+        }  
+        header {  
+            position: sticky;  
+            top: 0;  
+            z-index: 10;  
+        }  
+        footer {  
+            margin-top: auto;  
+        }  
+        .paper-link-image {  
+            transition: transform 0.3s ease, box-shadow 0.3s ease;  
+        }  
+        .paper-link-image:hover {  
+            transform: scale(1.05);  
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);  
+        }  
+    </style>  
+</head>  
+<body class="flex flex-col items-center justify-center min-h-screen">  
+    <header class="w-full flex justify-between items-center p-4 bg-white shadow-md">  
+        <h1 class="text-2xl font-bold text-blue-600">ScolioCheck</h1>  
+        <nav>  
+            <a href="{{ url_for('index') }}" class="text-gray-600 hover:text-blue-600 mx-2">Home</a>  
+            <a href="{{ url_for('about') }}" class="text-gray-600 hover:text-blue-600 mx-2">About</a>  
+            <a href="{{ url_for('paper') }}" class="text-gray-600 hover:text-blue-600 mx-2">Paper</a>  
+        </nav>  
+    </header>  
+
+    <main class="flex flex-col items-center justify-center p-8 w-full">  
+        <div class="flex justify-center w-full mb-8">  
+            <img src="{{ url_for('static', filename='assets/about-hero.png') }}" alt="ScolioCheck" class="hero-image">  
+        </div>  
+        
+        <div class="max-w-3xl px-4">  
+            <h2 class="text-3xl font-bold mb-4 text-center">About</h2>  
+            <p class="text-lg text-center mb-6">  
+                ScolioCheck is an AI-driven tool designed for detecting scoliosis, developed by Bachelor of Science in Computer Science students from Bina Nusantara University for their undergraduate thesis.  
+            </p>  
+            <p class="text-lg text-center mb-6">  
+                This web-based application employs a Convolutional Neural Network (CNN) model to analyze spine images and determine whether the spine is normal or exhibits signs of scoliosis. While the tool does not measure Cobb angles directly, it leverages CNN to detect abnormalities in spinal alignment. The research, focused on AI-assisted scoliosis detection, is set to be published in late 2024 as part of their work in artificial intelligence for orthopedic diagnostics.  
+            </p>  
+        </div>  
+
+        <h3 class="text-2xl font-bold mb-6">Creators of ScolioCheck</h3>  
+        <div class="flex justify-center space-x-8 mb-8">  
+            <div class="text-center creator-card bg-white p-6 rounded-lg shadow-md w-64">  
+                <img src="{{ url_for('static', filename='assets/andy-image.png') }}" alt="Andy Saputra" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-md" />  
+                <h4 class="text-xl font-semibold mb-2">Andy Saputra</h4>  
+                <p class="text-gray-600">2702234094</p>  
+            </div>  
+            <div class="text-center creator-card bg-white p-6 rounded-lg shadow-md w-64">  
+                <img src="{{ url_for('static', filename='assets/hernicksen-image.png') }}" alt="Hernicksen Satria" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-md" />  
+                <h4 class="text-xl font-semibold mb-2">Hernicksen Satria</h4>  
+                <p class="text-gray-600">2702235235</p>  
+            </div>  
+            <div class="text-center creator-card bg-white p-6 rounded-lg shadow-md w-64">  
+                <img src="{{ url_for('static', filename='assets/jonathan-image.png') }}" alt="Jonathan Alvios" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover shadow-md" />  
+                <h4 class="text-xl font-semibold mb-2">Jonathan Alvios</h4>  
+                <p class="text-gray-600">2702227504</p>  
+            </div>  
+        </div>  
+    </main>  
+
+    <footer class="bg-white p-6 w-full text-center shadow-md">  
+        <div class="flex justify-center space-x-8 mb-4">  
+            <a href="{{ url_for('index') }}" class="text-gray-600 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition">Home</a>  
+            <a href="{{ url_for('about') }}" class="text-gray-600 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition">About</a>  
+            <a href="{{ url_for('paper') }}" class="text-gray-600 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition">Paper</a>  
+        </div>  
+        <p class="text-gray-600 mb-4">  
+            This is part of an undergraduate research paper by Andy Saputra, Jonathan Alvios, and Hernicksen Satria for Bina Nusantara University. All Rights Reserved.  
+        </p>  
+        <div class="flex flex-col items-center">  
+            <img src="{{ url_for('static', filename='assets/binus-logo.png') }}" alt="BINUS University" class="h-16 mb-2">  
+            <span class="text-blue-600 font-bold text-lg">BINUS UNIVERSITY</span>  
+            <span class="text-gray-600">School of Computer Science</span>  
+        </div>  
+    </footer>  
+</body>  
+</html>

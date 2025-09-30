@@ -1,0 +1,88 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Paper - ScolioCheck</title>  
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">  
+    <style>  
+        body {  
+            background-color: #f9fafb;  
+            display: flex;  
+            flex-direction: column;  
+            min-height: 100vh;  
+        }  
+        .hero-image {  
+            width: 100%;  
+            max-width: 800px;  
+            height: 350px;  
+            object-fit: cover;  
+            border-radius: 16px;  
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);  
+            transition: transform 0.3s ease, box-shadow 0.3s ease;  
+        }  
+        .hero-image:hover {  
+            transform: scale(1.02);  
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);  
+        }  
+        header {  
+            position: sticky;  
+            top: 0;  
+            z-index: 10;  
+        }  
+        footer {  
+            margin-top: auto;  
+        }  
+        .paper-link-image {  
+            transition: transform 0.3s ease, box-shadow 0.3s ease;  
+        }  
+        .paper-link-image:hover {  
+            transform: scale(1.05);  
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);  
+        }  
+    </style>  
+</head>  
+<body>  
+    <header class="w-full flex justify-between items-center p-4 bg-white shadow-md">  
+        <h1 class="text-2xl font-bold text-blue-600">ScolioCheck</h1>  
+        <nav>  
+            <a href="{{ url_for('index') }}" class="text-gray-600 hover:text-blue-600 mx-2">Home</a>  
+            <a href="{{ url_for('about') }}" class="text-gray-600 hover:text-blue-600 mx-2">About</a>  
+            <a href="{{ url_for('paper') }}" class="text-gray-600 hover:text-blue-600 mx-2">Paper</a>  
+        </nav>  
+    </header>  
+
+    <main class="flex flex-col items-center justify-center p-8 flex-grow">  
+        <div class="flex justify-center w-full mb-8">  
+            <img src="{{ url_for('static', filename='assets/paper-hero.png') }}" alt="ScolioCheck" class="hero-image">  
+        </div>  
+            
+        <div class="max-w-3xl px-4">  
+            <h2 class="text-3xl font-bold mb-4 text-center">Paper</h2>  
+            <p class="text-lg text-center mb-6">  
+                Explore our complete manuscript for Bina Nusantara University - School of Computer Science.  
+            </p>  
+        </div>  
+    
+        <a href="https://docs.google.com/document/d/1QWlNL1fByoCoQePE6w8b83pa0U0nV_CHqGW5PNXaB7Y/edit?usp=sharing" target="_blank" class="flex justify-center w-full mb-8">  
+            <img src="{{ url_for('static', filename='assets/paper-image.png') }}" alt="Research Paper" class="paper-link-image" style="max-width: 600px; width: 100%; height: auto; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">  
+        </a>  
+    </main>  
+
+    <footer class="bg-white p-6 w-full text-center shadow-md">  
+        <div class="flex justify-center space-x-8 mb-4">  
+            <a href="{{ url_for('index') }}" class="text-gray-600 hover:text-blue-600 mx-2">Home</a>  
+            <a href="{{ url_for('about') }}" class="text-gray-600 hover:text-blue-600 mx-2">About</a>  
+            <a href="{{ url_for('paper') }}" class="text-gray-600 hover:text-blue-600 mx-2">Paper</a>  
+        </div>  
+        <p class="text-gray-600 mb-4">  
+            This is part of an undergraduate research paper by Andy Saputra, Jonathan Alvios, and Hernicksen Satria for Bina Nusantara University. All Rights Reserved.  
+        </p>  
+        <div class="flex flex-col items-center">  
+            <img src="{{ url_for('static', filename='assets/binus-logo.png') }}" alt="BINUS University" class="h-16 mb-2">  
+            <span class="text-blue-600 font-bold text-lg">BINUS UNIVERSITY</span>  
+            <span class="text-gray-600">School of Computer Science</span>  
+        </div>  
+    </footer>  
+</body>  
+</html>  
