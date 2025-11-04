@@ -84,9 +84,8 @@ ScolioVis/
 
 ## 🧑‍💻 Pengembang
 
-Jonathan Alvios, Hernicksen Satria, Andy Saputra
-Penelitian Model Deteksi Skoliosis Berbasis CNN
-Binus University Alam Sutera
+Jonathan Alvios, Hernicksen Satria, Andy Saputra | Binus University Alam Sutera  
+Penelitian Model Deteksi Skoliosis Berbasis CNN  
 
 ## 📜 Lisensi
 
