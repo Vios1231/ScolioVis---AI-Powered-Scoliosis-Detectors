@@ -66,7 +66,14 @@ scoliosis_detection_model_fixed.keras
    ✅ Normal Detected
    ⚠️ Scoliosis Detected
    ```
-   
+
+## Screenshot DEMO
+<img width="1904" height="1042" alt="Screenshot 2025-11-05 005259" src="https://github.com/user-attachments/assets/6f840805-9037-4b03-8406-b93b17aeb0c8" />
+<img width="1888" height="1035" alt="Screenshot 2025-11-05 005314" src="https://github.com/user-attachments/assets/d42e6039-0fa7-41da-a628-460808f6cde0" />
+<img width="1883" height="1040" alt="Screenshot 2025-11-05 005330" src="https://github.com/user-attachments/assets/3f10857a-f326-4d28-88cb-e6522bdcac1d" />
+<img width="1877" height="1009" alt="Screenshot 2025-11-05 005404" src="https://github.com/user-attachments/assets/7d75a8bd-08e3-4000-934f-50edf587fb0d" />
+<img width="1890" height="472" alt="Screenshot 2025-11-05 005446" src="https://github.com/user-attachments/assets/014f8038-0066-4eab-b612-4c4952be0bb3" />
+
 ## 📁 Struktur Folder
 ```bash
 ScolioVis/
