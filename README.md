@@ -36,29 +36,39 @@ scoliosis_detection_model_fixed.keras
    ```bash
    git clone https://github.com/<your-username>/ScolioVis.git
    cd ScolioVis
-python -m venv venv
-venv\Scripts\activate      # Windows
-# atau
-source venv/bin/activate   # Mac/Linux
-pip install -r requirements.txt
-python app.py
 
-🌐 Penggunaan
+2. Aktifkan Enviroment:
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate      # Windows
+   atau
+   source venv/bin/activate   # Mac/Linux
 
-Buka browser dan akses:
+3. Installasi Requirements:
+   ```bash
+   pip install -r requirements.txt
 
-http://127.0.0.1:5000
+5. Jalankan python app.py
+   ```bash
+   python app.py
+   ```
 
+## 🌐 Penggunaan
 
-Upload gambar X-ray (format: .jpg, .png, .jpeg, .gif).
+1. Buka browser dan akses:
+   ```bash
+   http://127.0.0.1:5000
 
-Tunggu hasil prediksi:
+2. Upload gambar X-ray (format: .jpg, .png, .jpeg, .gif).
 
-✅ Normal Detected
-
-⚠️ Scoliosis Detected
-
-📁 Struktur Folder
+3. Tunggu hasil prediksi:
+   ```bash
+   ✅ Normal Detected
+   ⚠️ Scoliosis Detected
+   ```
+   
+## 📁 Struktur Folder
+```bash
 ScolioVis/
 │
 ├── app.py
@@ -70,13 +80,14 @@ ScolioVis/
 │   ├── about.html
 │   └── paper.html
 └── README.md
+```
 
-🧑‍💻 Pengembang
+## 🧑‍💻 Pengembang
 
 Jonathan Alvios, Hernicksen Satria, Andy Saputra
 Penelitian Model Deteksi Skoliosis Berbasis CNN
 Binus University Alam Sutera
 
-📜 Lisensi
+## 📜 Lisensi
 
 MIT License © 2025 — Bebas digunakan untuk penelitian, pengembangan, dan edukasi.
